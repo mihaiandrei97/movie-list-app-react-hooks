@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const alias = 'MAA_Movie-';
 const img_url = 'https://image.tmdb.org/t/p/w1280';
-const api_url = 'https://api.themoviedb.org/3/';
-const api_key =  '04c35731a5ee918f014970082a0088b1';
 
 const Slider = ({ title, items, callback }) => {
   const [ currentItemId, setCurrentItemId ] = useState(0);

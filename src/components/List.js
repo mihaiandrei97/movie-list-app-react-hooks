@@ -19,28 +19,23 @@ const List = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    if( search == '') {
+    if( search === '') {
       axios.get(`${api_url}discover/movie?sort_by=popularity.desc&api_key=${api_key}&page=${page}`)
       .then(res => {
         const movies = res.data.results;
-        //console.log(res.data);
         setTotalPages(res.data.total_pages);
         setIsLoading(false);
         setPage(res.data.page);
         setItems(movies);
-        //setCurrentItem(res.data.results[0]);
       })
     } else {
-      //https://api.themoviedb.org/3/search/movie?api_key=04c35731a5ee918f014970082a0088b1&query=Jack+Reacher
       axios.get(`${api_url}search/movie?&api_key=${api_key}&query=${search}&page=${page}`)
       .then(res => {
         const movies = res.data.results;
         console.log(res.data);
         setTotalPages(res.data.total_pages);
         setIsLoading(false);
-        //setPage(res.data.page);
         setItems(movies);
-        //setCurrentItem(res.data.results[0]);
       })
     }
     
@@ -49,7 +44,7 @@ const List = () => {
   const buildItemInfo = (item) => {
     axios.get(`${api_url}movie/${item.id}?api_key=${api_key}`)
     .then(res => {
-      const movies = res.data.results;
+      //const movies = res.data.results;
       setCurrentItem(res.data)
     })
   }
@@ -63,14 +58,13 @@ const List = () => {
     });
   }
   const paginationChange = (e, value) => {
-    if( page != value) {
+    if( page !== value) {
       setItems([]);
       setPage(value);
     }
   }
 
   const buildCurrentItem = () => {
-    console.log(currentItem);
     return <div className={`${alias}current-item ${alias}fade-in`}>
       <div style={{
       backgroundImage: `url(${img_url + currentItem.backdrop_path})`,

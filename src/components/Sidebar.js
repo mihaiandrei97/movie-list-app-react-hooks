@@ -2,8 +2,7 @@ import React from 'react';
 
 const alias = 'MAA_Movie-';
 // list genres: http://api.themoviedb.org/3/genre/movie/list?api_key=04c35731a5ee918f014970082a0088b1
-// https://image.tmdb.org/t/p/w1280/5BwqwxMEjeFtdknRV792Svo0K1v.jpg
-// https://api.themoviedb.org/3/search/movie?api_key=04c35731a5ee918f014970082a0088b1&query=Jack+Reacher
+
 
 const side = ['Discover', 'TV & Movies', 'Movie List'];
 

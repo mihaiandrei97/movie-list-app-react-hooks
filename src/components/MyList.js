@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 const alias = 'MAA_Movie-';
 
 const img_url = 'https://image.tmdb.org/t/p/w1280';
@@ -8,7 +8,6 @@ const MyList = () => {
   const currentMovies = JSON.parse(localStorage.getItem("maa_movies") || "[]");
 
   const buildMyList = () => {
-    console.log("intra aici", currentMovies);
     return currentMovies.filter(item => item.img_path).map((item, index) => { 
       return <div key={index} className={`${alias}item-list`}>
         <img src={img_url + item.img_path} alt={item.title} style={{transform: 'none', cursor: 'default'}}/>

@@ -16,13 +16,11 @@ const Discover = () => {
     .then(res => {
       const movies = res.data.results;
       setPopularityItems(movies);
-      //setCurrentItem(res.data.results[0]);
     })
 
     axios.get(`${api_url}discover/movie?sort_by=revenue.desc&api_key=${api_key}&page=1`)
     .then(res => {
       const movies = res.data.results;
-      console.log(movies);
       setRevenueItems(movies);
       //setCurrentItem(res.data.results[0]);
     })
@@ -31,13 +29,12 @@ const Discover = () => {
   const buildItemInfo = (item) => {
     axios.get(`${api_url}movie/${item.id}?api_key=${api_key}`)
     .then(res => {
-      const movies = res.data.results;
+      //const movies = res.data.results;
       setCurrentItem(res.data)
     })
   }
 
   const buildCurrentItem = () => {
-    console.log(currentItem);
     return <div className={`${alias}current-item ${alias}fade-in`}>
       <div style={{
       backgroundImage: `url(${img_url + currentItem.backdrop_path})`,
@@ -96,7 +93,6 @@ const Discover = () => {
     </div>
   }
 
-  console.log(currentItem);
   return (
     <div className={`${alias}content`}>
       {/* <div className={`${alias}header`}>

@@ -27,6 +27,7 @@ body {
   margin: 0;
   padding: 10px;
   margin-bottom: 20px;
+  cursor: default;
 }
 
 .MAA_Movie-wrapper .MAA_Movie-sidebar ul {
