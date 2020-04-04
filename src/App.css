@@ -387,6 +387,9 @@ h2 {
   .MAA_Movie-sidebar {
     padding-bottom: 10px;
   }
+  .MAA_Movie-wrapper .MAA_Movie-content {
+    height: 100vh;
+  }
   .MAA_Movie-sidebar h1 {
     font-size: 22px;
     margin-bottom: 0 !important;
