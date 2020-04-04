@@ -421,6 +421,11 @@ h2 {
     margin: 0;
     margin-top: 30px;
   }
+  .MAA_Movie-wrapper .MAA_Movie-content .MAA_Movie-current-item-content .MAA_Movie-current-item-genres {
+    font-size: 10px;
+    padding-top: 10px;
+    
+  }
 }
 
 @media screen and (max-width: 385px) {
@@ -450,11 +455,18 @@ h2 {
   }
   .MAA_Movie-wrapper .MAA_Movie-content .MAA_Movie-current-item-content .MAA_Movie-current-item-genres {
     font-size: 10px;
+    padding-top: 10px;
     margin-top: 10px;
-    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
   }
   .MAA_Movie-wrapper .MAA_Movie-content .MAA_Movie-current-item-content a {
     padding: 4px 8px;
     font-size: 8px;
   }
+  
 }
