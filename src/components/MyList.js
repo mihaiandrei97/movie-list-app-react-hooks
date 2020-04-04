@@ -17,7 +17,7 @@ const MyList = () => {
   }
   
   return (
-    <div className={`${alias}content`}>
+    <div className={`${alias}content ${alias}content-my-list`}>
       <h2 className={`${alias}my-list-title`}>My List</h2>
       { currentMovies.length > 0 ? <div className={`${alias}items-list ${alias}fade-in`}> { buildMyList() }</div> : <p>There are no items in your list at this moment</p>}
     </div>
