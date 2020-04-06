@@ -34,6 +34,10 @@ const Discover = () => {
     })
   }
 
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   const buildCurrentItem = () => {
     return <div className={`${alias}current-item ${alias}fade-in`}>
       <div style={{
@@ -60,7 +64,7 @@ const Discover = () => {
             </div>
             <div className={`${alias}current-item-budget ${alias}current-item-data`}>
               <span>Budget: </span>
-              <span>{currentItem.budget}$</span>
+              <span>${numberWithCommas(currentItem.budget)}</span>
             </div>
             <div className={`${alias}current-item-vote ${alias}current-item-data`}>
               <span>Vote Average: </span>
